@@ -1,32 +1,29 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import {useTheme} from "../theme-context";
+import { Link } from "react-router-dom";
+import { useTheme } from "../../ThemeContext";
 
 const Navbar = () => {
-  const {theme, toggleTheme} = useTheme();
-
-  const toggleMode = () => {
-    toggleTheme();
-  };
+  
+  const {theme,toggleTheme} = useTheme()
 
   return (
-    <nav className={`navbar ${theme}`}>
-      <div>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/blog">Blog</Link>
-      </div>
-      <div className="mode-switch">
-        <label>
-          <input
-            type="checkbox"
-            onChange={toggleMode}
-            checked={theme === "dark"}
-          />
-          <span className="slider round"></span>
-        </label>
-      </div>
+    <div>
+    <div>
+    <nav>
+      <Link to='/'>Home</Link>
+      <Link to='/About'>About</Link>
+      <Link to='/LogIn'>LogIn</Link>
     </nav>
+    </div>
+    <div className="mode-switch">
+      <label>
+      <input type="checkbox"
+      onClick={toggleTheme}
+      checked={theme === "dark"} />
+      </label>
+    </div>
+    
+    </div>
   );
 };
 

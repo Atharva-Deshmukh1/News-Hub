@@ -1,15 +1,11 @@
-import React from "react";
-import { useTheme } from "../theme-context";
+import React from 'react'
 
 const Home = () => {
-  const { theme } = useTheme();
-
   return (
-    <div className={`page ${theme}`}>
-      <h1>Home Page</h1>
-      <p>Welcome to the Home Page!</p>
+    <div>
+      <h1>hii home</h1>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
