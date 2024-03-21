@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import * as Yup from Yup
 
 function LoginForm() {
   const [formData, setFormData] = useState({
-    firstName: 'yy',
+    firstName: '',
     lastName: '',
     email: '',
     password: '',
@@ -10,6 +11,7 @@ function LoginForm() {
     number: '',
     age: '',
     gender: '',
+    birthData: ""
   });
 
   const handleChange = (e) => {
