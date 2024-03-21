@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as Yup from Yup
+import * as Yup from 'yup'
 
 function LoginForm() {
   const [formData, setFormData] = useState({
@@ -14,6 +14,9 @@ function LoginForm() {
     birthData: ""
   });
 
+  const [errors,setErrors] = useState()
+
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -21,8 +24,6 @@ function LoginForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can implement form validation and submission logic here
-    console.log(formData);
   };
 
   return (
