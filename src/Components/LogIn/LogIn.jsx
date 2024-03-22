@@ -11,19 +11,42 @@ function LoginForm() {
     number: '',
     age: '',
     gender: '',
-    birthData: ""
+    birthDate: ""
   });
 
   const [errors,setErrors] = useState()
 
+  const validationSchema = Yup.object({
+    firstName: string().required("firstName required"),
+    lastName: string().required("lastName required"),
+    email: string()
+          .email("invalid email id")
+          .required("Email required"),
+    number: Yup.string().matches(/^\d{10}$/,"number should be 10 digit")
+          .required("number required"),
+    password: Yup.string().required("password required")
+              .min(8,"password must be at least 8 charecters")
+              .matches(/[0-9]/,"password must contain a digit")
+              .matches(/[!@#$%^&*]/,"password must contain a symbol")
+              .matches(/[a-z]/,"password must contain a lowercase letter"),
+    confirmPassword:Yup.string().oneOf(Yup.ref("password"),"password doesnt match")
+                    .required("required"),
+    age: Yup.number()
+        .min(18,"you must be at least 18")
+        .max(100,"you cannot be older tha 100")
+        .required("age is required"),
+    gender: Yup.string().required("gender is required"),
+    birthDate: Yup.date().required("date is required")
+  })
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
+    
   };
 
   return (
