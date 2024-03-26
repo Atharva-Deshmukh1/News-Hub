@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import '../Home/Home.css'
 const Home = () => {
   const [news, setNews] = useState([]);
   const APIkey = "f2899569196342ddac52e1a469e29094";
@@ -10,6 +10,7 @@ const Home = () => {
       const response = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${APIkey}`);
       const data = await response.json();
       setNews(data.articles);
+      console.log(data.articles);
     } catch (error) {
       console.log("something went wrong", error);
     }
@@ -22,7 +23,7 @@ const Home = () => {
   return (
     <div className="news-container">
       <h1 className="heading">Latest News</h1>
-      <div className="container">
+      <div className="containerr">
         {news.map((item, index) => (
           <div className="card" key={index}>
             <img src={item.urlToImage} alt={item.title} className="card-image" />
@@ -32,9 +33,11 @@ const Home = () => {
               <a href={item.url} target="_blank" rel="noopener noreferrer" className="read-more">
                 Read more
               </a>
-            </div>
+            </div> 
           </div>
         ))}
+      
+      
       </div>
     </div>
   );
