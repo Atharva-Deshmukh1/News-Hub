@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0 30px;
+  padding: 0 ;
 }
 
 [data-theme="light"] {
@@ -31,40 +31,6 @@ h1 {
   padding: 10px 0;
   margin-bottom: 20px;
 }
-.news-container {
-  width: 100vw;  /* Set width to full viewport width */
- 
-  padding: 20px;
-}
 
-.containerr {
-  
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
 
-.card {
-  width: 400px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-.card-image {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #ccc;
-}
-
-.card-content {
-  padding: 10px;
-}
-
-.read-more {
-  display: block;
-  text-align: right;
-  margin-top: 10px;
-  color: blue;
-}

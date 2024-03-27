@@ -1,19 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useTheme } from "../../ThemeContext";
+import { useTheme } from '../NewsContext/NewsContext';
 import './Navbar.css';
 
 const Navbar = () => {
-  
-  const {theme, toggleTheme} = useTheme();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <div className="navbar-container">
       <div className="nav-links">
         <nav>
           <Link to='/' className="nav-link">Home</Link>
-          <Link to='/About' className="nav-link">About</Link>
-          <Link to='/LogIn' className="nav-link">LogIn</Link>
+          <Link to='/about' className="nav-link">About</Link>
+          <Link to='/login' className="nav-link">LogIn</Link>
+          <Link to='/saved' className="nav-link">saved</Link>
+
         </nav>
       </div>
       <div className="mode-switch">
