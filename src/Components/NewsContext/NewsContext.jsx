@@ -14,6 +14,7 @@ const ContextProvider = ({ children }) => {
       const response = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${APIkey}`);
       const data = await response.json();
       setNews(data.articles);
+      console.log(data)
     } catch (error) {
       console.log("something went wrong", error);
     }

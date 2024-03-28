@@ -1,4 +1,4 @@
-.page {
+/* .page {
   display: flex;
   flex-direction: column;
   height: 92vh;
@@ -22,7 +22,6 @@
   color: inherit;
 }
 
-/* Switch styles */
 .mode-switch label {
   display: inline-block;
   width: 40px;
@@ -61,4 +60,4 @@
 
 .mode-switch input:checked + .slider:before {
   transform: translateX(20px);
-}
+} */

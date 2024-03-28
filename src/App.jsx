@@ -5,23 +5,26 @@ import Home from './Components/Home/Home';
 import NewsDetails from './Components/NewsDetails/NewsDetails';
 import About from './Components/About/About';
 import LogIn from './Components/LogIn/LogIn';
-import NewsContextProvider, { ThemeProvider } from './Components/NewsContext/NewsContext';  // Adjusted import
+import NewsContextProvider, { ThemeProvider } from './Components/NewsContext/NewsContext';
+import { SavedNewsProvider } from './Components/SavedNewsContext/SavedNewsContext';  // Updated import
 import SavedNews from './Components/SavedNews/SavedNews';
 
 function App() {
   return (
-    <ThemeProvider>  {/* Updated to use ThemeProvider */}
+    <ThemeProvider>
       <NewsContextProvider>
-        <Router>
-          <Navbar />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/login' element={<LogIn />} />
-            <Route path="/news/:index" element={<NewsDetails />} />
-            <Route path="/saved" element={<SavedNews />} />
-          </Routes>
-        </Router>
+        <SavedNewsProvider>  {/* Ensure SavedNewsProvider wraps NewsDetails */}
+          <Router>
+            <Navbar />
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/login' element={<LogIn />} />
+              <Route path="/news/:index" element={<NewsDetails />} />  {/* NewsDetails component here */}
+              <Route path="/saved" element={<SavedNews />} />
+            </Routes>
+          </Router>
+        </SavedNewsProvider>
       </NewsContextProvider>
     </ThemeProvider>
   );

@@ -1,0 +1,120 @@
+.news-details-container {
+   width: 100vw;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .news-details-container.light {
+    background-color: #ffffff;
+    color: #333333;
+  }
+  
+  .news-details-container.dark {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  .back-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .back-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .save-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .save-btn:hover {
+    background-color: #218838;
+  }
+  
+  .details-card {
+    display: flex;
+    align-items: center;
+  }
+  
+  .details-image {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
+  
+  .details-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .details-content p {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+  
+  .read-more {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s;
+  }
+  
+  .read-more:hover {
+    color: #0056b3;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .details-image {
+      width: 150px;
+    }
+  
+    .details-content h2 {
+      font-size: 1.2em;
+    }
+  
+    .details-content p {
+      font-size: 0.9em;
+    }
+  
+    .back-btn,
+    .save-btn {
+      padding: 8px 15px;
+      font-size: 0.9em;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .details-image {
+      width: 100px;
+    }
+  
+    .details-content h2 {
+      font-size: 1em;
+    }
+  
+    .details-content p {
+      font-size: 0.8em;
+    }
+  
+    .back-btn,
+    .save-btn {
+      padding: 6px 12px;
+      font-size: 0.8em;
+    }
+  }
+  

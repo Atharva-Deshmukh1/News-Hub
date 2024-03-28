@@ -1,4 +1,4 @@
-.page {
+/* .page {
     display: flex;
     flex-direction: column;
     height: 92vh;
@@ -60,4 +60,4 @@
   
   .mode-switch input:checked + .slider:before {
     transform: translateX(20px);
-  }
+  } */
