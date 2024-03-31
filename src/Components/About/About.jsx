@@ -7,7 +7,7 @@ const About = () => {
 
   return (
     <div className={`about-container ${theme}`}>
-      <h1>About [Your News App Name]</h1>
+      <h1>About NewsHub</h1>
       <p>
         Welcome to [Your News App Name]! We are dedicated to providing accurate and timely news coverage from around the world. Our mission is to empower our users with the information they need to make informed decisions and stay updated on the latest events, trends, and developments. With a comprehensive range of news categories, customizable user experience, and a user-friendly interface, our app is designed to make staying informed easier and more convenient than ever before.
       </p>
