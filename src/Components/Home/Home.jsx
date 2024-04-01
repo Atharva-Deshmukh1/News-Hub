@@ -7,6 +7,7 @@ const Home = () => {
   const { news, getNews, setCountry } = useContext(NewsContext);
   const { theme } = useTheme();
   const [currentPage, setCurrentPage] = useState(1);
+  const [searchQuery, setSearchQuery] = useState('');
   const itemsPerPage = 10;
 
   const totalPages = Math.ceil(news.length / itemsPerPage);
@@ -17,11 +18,17 @@ const Home = () => {
     setCurrentPage(1); // Reset to the first page when country changes
   };
 
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
-  const displayedNews = news.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+  const displayedNews = news
+    .filter((item) => item.title.toLowerCase().includes(searchQuery.toLowerCase()))
+    .slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   return (
     <div className={`news-container ${theme}`}>
@@ -36,6 +43,17 @@ const Home = () => {
           <option value="ch">UK</option>
           {/* Add other countries as needed */}
         </select>
+      </div>
+
+      {/* Search Input */}
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search news..."
+          className="search-bar"
+          value={searchQuery}
+          onChange={handleSearchChange}
+        />
       </div>
 
       <div className="containerr">

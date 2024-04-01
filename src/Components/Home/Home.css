@@ -80,7 +80,7 @@
   .heading {
     font-size: 2em;
   }
-
+ 
   .card-image {
     height: 180px;
   }
@@ -198,4 +198,4 @@
 .pagination button:disabled {
   cursor: not-allowed;
   opacity: 0.6;
-}
+} 
