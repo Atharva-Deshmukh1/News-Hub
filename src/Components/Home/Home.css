@@ -31,7 +31,6 @@
 }
 
 .card {
-  
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -138,7 +137,43 @@
     font-size: 0.7em;
   }
 }
-/* Home.css */
+
+/* Search and Dropdown Styles */
+.country-select {
+  margin-bottom: 20px;
+}
+
+#country {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  appearance: none;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.search-bar:focus,
+#country:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Pagination Styles */
 .pagination {
   display: flex;
   justify-content: center;
