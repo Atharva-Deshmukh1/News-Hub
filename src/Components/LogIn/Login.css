@@ -7,12 +7,21 @@
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
-.light .container {
+.container.light  {
   background-color: #ffffff;
   color: #333333;
 }
 
-.dark .container {
+.container.dark  {
+  background-color: #333333;
+  color: #ffffff;
+}
+.total-container.light  {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.total-container.dark  {
   background-color: #333333;
   color: #ffffff;
 }
@@ -41,7 +50,7 @@
 
 .input {
   width: 100%;
-  padding: 10px;
+  padding: 10px 0px;
   border-radius: 5px;
   border: 1px solid #ccc;
   transition: border-color 0.3s;
@@ -80,7 +89,7 @@
   }
 
   .input {
-    padding: 8px;
+    padding: 8px 0px;
   }
 
   .button {
@@ -90,7 +99,7 @@
 
 @media screen and (max-width: 480px) {
   .input {
-    padding: 6px;
+    padding: 6px 0px;
   }
 
   .button {

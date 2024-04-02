@@ -275,6 +275,7 @@ function LoginForm() {
   };
 
   return (
+    <div className={`total-container ${theme}`}>
     <div className={`container ${theme}`}>
       <h2 className="title">Registration Form</h2>
       <form onSubmit={handleSubmit} className="form">
@@ -412,6 +413,7 @@ function LoginForm() {
         </div>
         <button type="submit" className="button">Submit</button>
       </form>
+    </div>
     </div>
   );
 }
