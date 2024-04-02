@@ -1,4 +1,4 @@
-.news-container {
+/* .news-container {
   margin: 0 auto;
   padding: 20px;
 }
@@ -18,7 +18,10 @@
   text-align: center;
   margin-bottom: 30px;
 }
-
+.select-search-container{
+  display: flex;
+  align-items: center;
+}
 .containerr {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -71,7 +74,6 @@
   color: #0056b3;
 }
 
-/* Responsive Styles */
 @media screen and (max-width: 992px) {
   .containerr {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -138,7 +140,6 @@
   }
 }
 
-/* Search and Dropdown Styles */
 .country-select {
   margin-bottom: 20px;
 }
@@ -173,7 +174,6 @@
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-/* Pagination Styles */
 .pagination {
   display: flex;
   justify-content: center;
@@ -198,4 +198,233 @@
 .pagination button:disabled {
   cursor: not-allowed;
   opacity: 0.6;
-} 
+}   */
+
+/* News Container */
+.news-container {
+  margin: 0 auto;
+  padding: 30px;
+  /* border-radius: 8px; */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.news-container.light {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.news-container.dark {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.heading {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #007bff;
+}
+
+.select-search-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.containerr {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  color: #333333;
+}
+
+.card-content p {
+  font-size: 1em;
+  margin-bottom: 20px;
+  color: #666666;
+}
+
+.read-more {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  color: #0056b3;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+  .containerr {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .heading {
+    font-size: 2em;
+  }
+ 
+  .card-image {
+    height: 200px;
+  }
+
+  .card-content h2 {
+    font-size: 1.1em;
+  }
+
+  .card-content p {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .containerr {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .heading {
+    font-size: 1.8em;
+  }
+
+  .card-image {
+    height: 170px;
+  }
+
+  .card-content h2 {
+    font-size: 1em;
+  }
+
+  .card-content p {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .select-search-container{
+    flex-direction: column;
+  }
+
+  .containerr {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: 1.5em;
+  }
+
+  .card-image {
+    height: 140px;
+  }
+
+  .card-content h2 {
+    font-size: 0.9em;
+  }
+
+  .card-content p {
+    font-size: 0.7em;
+  }
+  
+}
+
+/* Search and Dropdown Styles */
+.country-select {
+  margin-bottom: 20px;
+}
+
+#country {
+  
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  appearance: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.search-container {
+  margin-top: 5px;
+  
+}
+
+.search-bar {
+  margin-top: -5px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.search-bar:focus,
+#country:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.pagination button {
+  padding: 12px 18px;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1em;
+  color: #007bff;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}

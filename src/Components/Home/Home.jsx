@@ -15,7 +15,7 @@ const Home = () => {
   const handleCountryChange = (e) => {
     setCountry(e.target.value);
     getNews();
-    setCurrentPage(1); // Reset to the first page when country changes
+    setCurrentPage(1); 
   };
 
   const handleSearchChange = (e) => {
@@ -33,7 +33,8 @@ const Home = () => {
   return (
     <div className={`news-container ${theme}`}>
       <h1 className="heading">Latest News</h1>
-
+<div className='select-search-container'>
+  
       {/* Country Selection Dropdown */}
       <div className="country-select">
         <label htmlFor="country">Select Country: </label>
@@ -56,6 +57,7 @@ const Home = () => {
         />
       </div>
 
+</div>
       <div className="containerr">
         {displayedNews.map((item, index) => (
           <Link
