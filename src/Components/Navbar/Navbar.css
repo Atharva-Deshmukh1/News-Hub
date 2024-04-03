@@ -88,9 +88,13 @@ input:checked + .slider:before {
   .slider {
     border-radius: 22px;
   }
-
-  .slider:before {
-    height: 18px; 
-    width: 18px; 
+  input:checked + .slider:before {
+    transform: translateX(18px);
   }
+  .slider:before {
+    bottom: 2px;
+    height: 18px; 
+    width: 18px;
+  }
+  
 }

@@ -67,8 +67,8 @@ const Home = () => {
           >
             <div className="card">
               <img src={item.urlToImage} alt={item.title} className="card-image" />
-              <div className="card-content">
-                <h2>{item.title}</h2>
+              <div className="card-content ">
+                <h2 className={`${theme}`}>{item.title}</h2>
                 <p>{item.description}</p>
                 <a href={item.url} target="_blank" rel="noopener noreferrer" className="read-more">
                   Read more
