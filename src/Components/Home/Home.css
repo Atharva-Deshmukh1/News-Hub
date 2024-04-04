@@ -5,11 +5,13 @@
   background-image: url('https://wallpapers.com/images/hd/news-background-nn1dz1jr9kjlkdqu.jpg');
   /* background-repeat: no-repeat; */
   background-size: cover;
-  width: 100vw;
+  width: 99vw;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
+  color: white !important;
 }
 .App-name{
+  font-size: 4em;
   text-align: center;
 padding-top: 20px;
 }
@@ -44,6 +46,8 @@ padding-top: 20px;
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 30px;
+  position: relative;
+  top: 90px;
 }
 
 .containerr {
@@ -118,7 +122,9 @@ padding-top: 20px;
   .heading {
     font-size: 2em;
   }
- 
+  .App-name{
+    font-size: 3.5em;
+  }
   .card-image {
     height: 200px;
   }
@@ -130,6 +136,11 @@ padding-top: 20px;
   .card-content p {
     font-size: 0.9em;
   }
+  .header{
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    width: 100vw;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -140,7 +151,9 @@ padding-top: 20px;
   .heading {
     font-size: 1.8em;
   }
-
+  .App-name{
+    font-size: 3em;
+  }
   .card-image {
     height: 170px;
   }
@@ -172,7 +185,9 @@ padding-top: 20px;
   .heading {
     font-size: 1.5em;
   }
-
+  .App-name{
+    font-size: 2.5em;
+  }
   .card-image {
     height: 140px;
   }
@@ -288,6 +303,9 @@ padding-top: 20px;
     width: 25px;
     bottom: 2px;
     right: 1px;
+  }
+  .select-search-container{
+    flex-direction: column;
   }
   .search-container img{
     width: 25px;
