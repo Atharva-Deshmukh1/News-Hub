@@ -3,23 +3,32 @@
   margin-left: -32px;
   height: 300px;
   background-image: url('https://wallpapers.com/images/hd/news-background-nn1dz1jr9kjlkdqu.jpg');
-  /* background-repeat: no-repeat; */
   background-size: cover;
   width: 99vw;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   color: white !important;
 }
-.App-name{
+.App-name {
   font-size: 4em;
   text-align: center;
-padding-top: 20px;
+  padding-top: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #ffffff; 
+  text-shadow: 2px 2px 4px #aaa;
+  letter-spacing: 2px; 
+  transition: all 0.3s ease; 
 }
+
+.App-name:hover {
+  color: #6a0202;
+  text-shadow: 3px 3px 6px #888;
+}
+
 /* News Container */
 .news-container {
   margin: 0 auto;
   padding: 30px;
-  /* border-radius: 8px; */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 .news-container.light {
@@ -31,14 +40,30 @@ padding-top: 20px;
   background-color: #333333;
   color: #ffffff;
 }
-
 .heading {
   padding-top: 20px;
   font-size: 2.5em;
   text-align: center;
   margin-bottom: 40px;
-  color: #000000 ;
- font-weight: 00 ;
+  color: #000000;
+  position: relative;
+}
+
+.heading::after {
+  content: '';
+  position: absolute; 
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+  height: 2px;
+  background-color: #000;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.heading:hover::after {
+  width: 80%; 
 }
 
 .select-search-container {
@@ -255,7 +280,6 @@ padding-top: 20px;
 }
 
 /* Pagination Styles */
-/* Default styles */
 .pagination {
   display: flex;
   justify-content: center;
@@ -317,7 +341,7 @@ padding-top: 20px;
   .pagination button {
     
     margin: 5px;
-    padding: 6px 10px; /* even smaller padding for smallest devices */
-    font-size: 0.8em; /* even smaller font size for smallest devices */
+    padding: 6px 10px; 
+    font-size: 0.8em;
   }
 }
