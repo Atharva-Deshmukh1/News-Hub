@@ -1,3 +1,10 @@
+.header{
+  margin-top: -30px;
+  margin-left: -32px;
+  height: 300px;
+  background: rebeccapurple;
+  width: 100vw;
+}
 /* News Container */
 .news-container {
   margin: 0 auto;
@@ -5,7 +12,6 @@
   /* border-radius: 8px; */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-
 .news-container.light {
   background-color: #ffffff;
   color: #333333;
@@ -17,10 +23,12 @@
 }
 
 .heading {
+  
   font-size: 2.5em;
   text-align: center;
   margin-bottom: 40px;
-  color: #007bff;
+  color: #000000 !important;
+ font-weight: 600 !important;
 }
 
 .select-search-container {
@@ -46,6 +54,7 @@
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  height: 500px !important;
 }
 
 .card:hover {
@@ -138,11 +147,14 @@
 }
 
 @media screen and (max-width: 576px) {
-  .select-search-container{
-    flex-direction: column;
+  .card-content h2.light {
+    font-size: 1em;
+  }
+  .card-content h2.dark {
+    font-size: 1em;
   }
   .card{
-    height: auto;
+    height: auto !important;
   }
 
   .containerr {
@@ -187,9 +199,22 @@
 
 .search-container {
   margin-top: 5px;
+  display: flex;
+  position: relative;
+}
+.search-container img{
+  width: 35px;
+  height: 35px;
+}
+.search{
+  position: absolute;
+  right: 5px;
   
 }
-
+.select-search-container{
+  gap: 10px;
+  margin-bottom: 20px;
+}
 .search-bar {
   margin-top: -5px;
   width: 100%;
@@ -239,6 +264,27 @@
 /* Responsive styles */
 
 @media (max-width: 480px) {
+  .card{
+    height: auto !important;
+  }
+  #country{
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .search-bar{
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .search{
+    height: 25px;
+    width: 25px;
+    bottom: 2px;
+    right: 1px;
+  }
+  .search-container img{
+    width: 25px;
+    height: 25px;
+  }
   .pagination{
     gap: 0px;
   }

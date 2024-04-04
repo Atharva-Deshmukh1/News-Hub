@@ -32,7 +32,8 @@ const Home = () => {
 
   return (
     <div className={`news-container ${theme}`}>
-      <h1 className="heading">Latest News</h1>
+      <div className='header'>
+        <h1>NewsHub</h1>
 <div className='select-search-container'>
   
       {/* Country Selection Dropdown */}
@@ -41,7 +42,6 @@ const Home = () => {
         <select id="country" onChange={handleCountryChange}>
           <option value="in">India</option>
           <option value="us">USA</option>
-          <option value="ch">UK</option>
           {/* Add other countries as needed */}
         </select>
       </div>
@@ -55,9 +55,14 @@ const Home = () => {
           value={searchQuery}
           onChange={handleSearchChange}
         />
+        <div className='search'>
+        <img src="https://blog.expertrec.com/wp-content/uploads/2019/01/seo-1970475_640.png" alt="" />
+        </div>
       </div>
 
 </div>
+</div>
+<h1 className="heading">Latest News</h1>
       <div className="containerr">
         {displayedNews.map((item, index) => (
           <Link
