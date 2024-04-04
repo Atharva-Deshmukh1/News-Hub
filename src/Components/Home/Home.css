@@ -2,8 +2,16 @@
   margin-top: -30px;
   margin-left: -32px;
   height: 300px;
-  background: rebeccapurple;
+  background-image: url('https://wallpapers.com/images/hd/news-background-nn1dz1jr9kjlkdqu.jpg');
+  /* background-repeat: no-repeat; */
+  background-size: cover;
   width: 100vw;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.App-name{
+  text-align: center;
+padding-top: 20px;
 }
 /* News Container */
 .news-container {
@@ -23,12 +31,12 @@
 }
 
 .heading {
-  
+  padding-top: 20px;
   font-size: 2.5em;
   text-align: center;
   margin-bottom: 40px;
-  color: #000000 !important;
- font-weight: 600 !important;
+  color: #000000 ;
+ font-weight: 00 ;
 }
 
 .select-search-container {

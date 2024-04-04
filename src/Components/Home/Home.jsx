@@ -33,7 +33,7 @@ const Home = () => {
   return (
     <div className={`news-container ${theme}`}>
       <div className='header'>
-        <h1>NewsHub</h1>
+        <h1 className='App-name'>NewsHub</h1>
 <div className='select-search-container'>
   
       {/* Country Selection Dropdown */}
