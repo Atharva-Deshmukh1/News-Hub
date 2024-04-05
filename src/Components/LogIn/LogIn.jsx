@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import * as Yup from 'yup';
 import '../LogIn/Login.css';
@@ -38,7 +39,7 @@ function LoginForm() {
     confirmPassword: Yup.string()
       .oneOf([Yup.ref('password'), null], 'Passwords must match')
       .required('Confirm Password required'),
-    age: Yup.number()
+    age: Yup.number("It must be a number")
       .min(18, 'You must be at least 18')
       .max(100, 'You cannot be older than 100')
       .required('Age is required'),
@@ -67,8 +68,14 @@ function LoginForm() {
   return (
     <div className={`total-container ${theme}`}>
     <div className={`container ${theme}`}>
+      <div className='form-container'>
+        <div className='img-title-container'>
       <h2 className="title">Registration Form</h2>
+      <p className='p'>Welcome! We are happy to have your here. We hope you have safe and nice time.</p>
+      </div>
       <form onSubmit={handleSubmit} className="form">
+        <div className='left-right-container'>
+      <div className='left'>
       <div className="inputGroup">
           <label className="label">
             First Name:
@@ -143,7 +150,8 @@ function LoginForm() {
             {errors.confirmPassword && <div className="error">{errors.confirmPassword}</div>}
           </label>
         </div>
-        
+        </div>
+        <div className='right'>
         <div className="inputGroup">
           <label className="label">
             Number:
@@ -201,8 +209,13 @@ function LoginForm() {
             {errors.birthDate && <div className="error">{errors.birthDate}</div>}
           </label>
         </div>
+        </div>
+        </div>
+        <div className='btn'>
         <button type="submit" className="button">Submit</button>
+        </div>
       </form>
+        </div>
     </div>
     </div>
   );
