@@ -15,7 +15,7 @@ const SavedNews = () => {
 
   return (
     <div className={`saved-news-container ${theme}`}>
-      <h1>Saved News</h1>
+      <h1 className={`title ${theme}`}>Saved News</h1>
       <ul>
         {savedNews.map((item, index) => (
           <li key={index}>
