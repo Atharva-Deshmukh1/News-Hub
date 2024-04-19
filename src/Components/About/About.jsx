@@ -1,9 +1,9 @@
 import React from 'react';
-import { useTheme } from '../NewsContext/NewsContext'; // Import the useTheme hook
+import { useTheme } from '../NewsContext/NewsContext'; 
 import '../About/About.css';
 
 const About = () => {
-  const { theme } = useTheme(); // Use the useTheme hook
+  const { theme } = useTheme();
 
   return (
     <div className={`about-container ${theme}`}>
