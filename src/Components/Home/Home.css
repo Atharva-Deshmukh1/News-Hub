@@ -200,7 +200,6 @@
     font-size: 1em;
   }
   .card{
-    /* height: auto !important; */
     height: auto;
   }
 
@@ -313,7 +312,6 @@
 
 @media (max-width: 480px) {
   .card{
-    /* height: auto !important; */
     height: auto;
   }
   #country{

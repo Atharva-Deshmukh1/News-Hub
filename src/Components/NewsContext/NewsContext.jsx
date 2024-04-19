@@ -6,7 +6,7 @@ export const ThemeContext = createContext();
 const ContextProvider = ({ children }) => {
   // News Context
   const [news, setNews] = useState([]);
-  const [country, setCountry] = useState("in"); // Default country is "in"
+  const [country, setCountry] = useState("in"); 
   const APIkey = "f2899569196342ddac52e1a469e29094";
 
   const getNews = async () => {
@@ -22,9 +22,9 @@ const ContextProvider = ({ children }) => {
 
   useEffect(() => {
     getNews();
-  }, [country]); // Fetch news whenever the country changes
+  }, [country]); 
 
-  const newsContextValue = { news, getNews, setCountry }; // Provide setCountry
+  const newsContextValue = { news, getNews, setCountry }; 
 
   // Theme Context
   const [theme, setTheme] = useState("light");

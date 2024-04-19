@@ -2,12 +2,12 @@
 import React, { useContext } from 'react';
 import { SavedNewsContext } from '../SavedNewsContext/SavedNewsContext';
 import { Link } from 'react-router-dom';
-import { useTheme } from '../NewsContext/NewsContext'; // Import the useTheme hook
+import { useTheme } from '../NewsContext/NewsContext'; 
 import '../SavedNews/SavedNews.css';
 
 const SavedNews = () => {
   const { savedNews, removeNews } = useContext(SavedNewsContext);
-  const { theme } = useTheme(); // Use the useTheme hook
+  const { theme } = useTheme(); 
 
   const handleRemove = (index) => {
     removeNews(index);
