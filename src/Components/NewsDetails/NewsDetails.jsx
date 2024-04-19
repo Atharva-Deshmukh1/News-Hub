@@ -65,7 +65,7 @@ const NewsDetails = () => {
       <button onClick={handleSave} className="save-btn">
         Save
       </button>
-      <div className="card">
+      <div className="card-cont">
         <img src={urlToImage} alt={title} className="details-image" />
         <div className="details-content">
           <h2>{title}</h2>

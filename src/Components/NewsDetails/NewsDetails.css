@@ -13,9 +13,9 @@
   color: #ffffff;
 }
 
-.card {
+.card-cont {
   padding: 20px;
-  height: auto !important;
+  height: auto ;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -143,7 +143,9 @@
   .details-content h2 {
     font-size: 1.2em;
   }
-
+  .details-content{
+  margin: 0 -30px;
+}
   .details-content p {
     font-size: 0.8em;
   }
