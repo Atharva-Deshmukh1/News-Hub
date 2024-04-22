@@ -29,7 +29,7 @@ const SavedNews = () => {
           </li>
         ))}
       </ul>
-      <Link to="/" className="back-btn">
+      <Link to="/News-Hub" className="back-btn">
         Back to Home
       </Link>
     </div>

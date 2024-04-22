@@ -18,7 +18,7 @@ const NewsDetails = () => {
 
   return (
     <div className={`news-details-container ${theme}`}>
-      <Link to="/" className="back-btn">
+      <Link to="/News-Hub" className="back-btn">
         Back to Home
       </Link>
       <button onClick={handleSave} className="save-btn">
