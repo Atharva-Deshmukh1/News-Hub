@@ -17,7 +17,7 @@ function App() {
           <Router>
             <Navbar />
             <Routes>
-              <Route path='/' element={<Home />} />
+              <Route path='/News-Hub' element={<Home />} />
               <Route path='/about' element={<About />} />
               <Route path='/login' element={<LogIn />} />
               <Route path="/news/:index" element={<NewsDetails />} />  {/* NewsDetails component here */}
