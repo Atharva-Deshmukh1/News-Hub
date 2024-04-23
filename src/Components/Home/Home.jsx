@@ -66,7 +66,7 @@ const Home = () => {
       <div className="containerr">
         {displayedNews.map((item, index) => (
           <Link
-            to={`/news/${index}`}
+            to={`/News-Hub/news/${index}`}
             key={index}
             className="card-link"
           >

@@ -18,10 +18,10 @@ function App() {
             <Navbar />
             <Routes>
               <Route path='/News-Hub' element={<Home />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/login' element={<LogIn />} />
-              <Route path="/news/:index" element={<NewsDetails />} />  {/* NewsDetails component here */}
-              <Route path="/saved" element={<SavedNews />} />
+              <Route path='/News-Hub/about' element={<About />} />
+              <Route path='/News-Hub/login' element={<LogIn />} />
+              <Route path="/News-Hub/news/:index" element={<NewsDetails />} />  {/* NewsDetails component here */}
+              <Route path="/News-Hub/saved" element={<SavedNews />} />
             </Routes>
           </Router>
         </SavedNewsProvider>
